@@ -1,16 +1,36 @@
-
 # Table of Contents
 1. [Folder Structure](#folder-structure)
-2. [Automating Folder Creation with `script_to_automate.sh`](#automating-folder-creation)
-3. [Automating with Cron Job](#automating-with-cron-job)
-4. [ADDITIONAL](#additional)
+   
+   1.1. [Before Running Scripts](#before-running-scripts)
+   
+   1.2. [Running `index.py`](#running-index)
 
+2. [Automating Folder Creation with `script_to_automate.sh`](#automating-folder-creation)
+   
+   2.1. [Bash Script: `script_to_automate.sh`](#script-to-automate)
+   
+   2.2. [Running the Script](#running-script)
+
+3. [Automating with Cron Job](#automating-with-cron-job)
+   
+   3.1. [Adding Cron Job](#adding-cron-job)
+   
+   3.2. [Verify Cron Job](#verify-cron-job)
+   
+   3.3. [Logging (optional)](#logging)
+
+4. [ADDITIONAL](#additional)
+   
+   4.1. [Crontab Generator](#crontab-generator)
+
+---
 
 ## Folder Structure <a name="folder-structure"></a>
 
-### Folder Structure Before Running Scripts
+### Before Running Scripts <a name="before-running-scripts"></a>
 
 - **Before running the scripts, the folder structure looks like:**
+
   ![Screenshot from 2024-01-06 11-20-13](https://github.com/ishtiaqSamdani/fetch-aws-resources/assets/82057297/abd2f509-317e-4ff0-b645-56791725f565)
 
 ### Running `index.py` <a name="running-index"></a>
@@ -88,6 +108,8 @@ For example:
 This will append both standard output and standard error to the specified log file.
 
 ## ADDITIONAL <a name="additional"></a>
+
+### Crontab Generator <a name="crontab-generator"></a>
 
 to generate cronjob use : [Crontab Generator](https://crontab-generator.org/)
 ```
