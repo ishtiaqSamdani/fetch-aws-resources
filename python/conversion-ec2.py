@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import json
 
@@ -52,5 +53,10 @@ df = pd.DataFrame({
     "Remark": "-"
 })
 
+# create python_execl folder
+folder_path = '../python_execl'
+if not os.path.exists(folder_path):
+    os.makedirs(folder_path)
+    
 # Save to Excel
 df.to_excel("../python_execl/ec2_data.xlsx", index=False)

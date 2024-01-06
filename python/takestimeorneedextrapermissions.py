@@ -1,3 +1,4 @@
+import os
 import boto3
 import json
 from botocore.exceptions import ClientError
@@ -69,7 +70,14 @@ def get_all_kms_keys():
 
     return kms_keys_data
 
+def create_output_folder():
+    folder_path = '../python_output'
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+        
 def main():
+    create_output_folder()
+
     s3_buckets_data = get_all_s3_buckets()
     kms_keys_data = get_all_kms_keys()
 

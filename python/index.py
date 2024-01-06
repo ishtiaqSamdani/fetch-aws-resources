@@ -1,3 +1,4 @@
+import os
 import boto3
 import json
 from botocore.exceptions import ClientError  # Add this line
@@ -238,8 +239,14 @@ def get_all_rds_instances():
 
     return rds_instances_data
 
+def create_output_folder():
+    folder_path = '../python_output'
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+        
 def main():
-
+    # create python_output folder
+    create_output_folder()
 
     ec2_instances_data = get_all_ec2_instances()
     # Write EC2 instances data to ec2.json
